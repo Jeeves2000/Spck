@@ -4,47 +4,46 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
- test
-  <title>HTML</title>
-  
-  <!-- HTML -->
-  <HTML>
 
 <TITLE>Adding text dynamically</TITLE>
 
 <SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
-
-<!- Hide from browsers that do not support JavaScript
+<!-- Hide from browsers that do not support JavaScript
 
 function displayText() {
 
 // Store the heading elements in local variables
 // so we can work with them easily
 
-var firstGraf document.getElementById("grafl");
+var firstGraf document.getElementById("graf1");
 var secondGraf document.getElementById("graf2");
 
+// If graf1 is selected, change visibility to visible;
+// If graf is NOT selected, change visibility to hidden;
 
-// If graf1 is selected, change visibility to visible:
-// If graf is NOT selected, change visibility to hidden first@raf.style.visibility=(document.myform.graflbox.checked) ? "visible": "hidden":
-// 1 graf2 is selected, change visibility to visible:
-// 1 graf2 is NOT selected, change visibility to hidden 
+firstGraf.style.visibility=(document.myform.graf1box.checked) ? "visible": "hidden";
+// If graf2 is selected, change visibility to visible:
+// If graf2 is NOT selected, change visibility to hidden 
 
-secondCraf.style.visibility-(document.myForm.graf2box.checked) ? "visible":
-
-"hidden":
+secondGraf.style.visibility-(document.myForm.graf2box.checked) ? "visible": "hidden";
 
 function changeText() (
 
-// Store the new text in a variab'e called newText var newText document.myForm.changeableText.value;
+// Store the new text in a variab'e called newText 
+var newText document.myForm.changeableText.value;
 // Get the existing element text and store it in
 // "oldText"
 
 var oldText document.getElementById("graf3");
 
 // Swap old text with new text.
-// Replace oldText with newText odText.firstChild.nodeValue newText:
-//--> Tinist hiding
+// Replace oldText with newText 
+odText.firstChild.nodeValue = newText:
+
+}
+
+
+//--> Finish hiding
 
 </SCRIPT>
 
@@ -54,32 +53,34 @@ var oldText document.getElementById("graf3");
 
 // Defining three named paragraphs
 
-<P 10-*graf1">1. This is the first paragraph. style sheets, you can assign unique Ins to all Just paragraphs, but headings, lists, styles By taking advantage of cascading sorts of document elements; not virtually any document element. And once you have a unique ID assigned to a document element, you can display or hide that document element using a coding Lechnique similar to the one shown here.</P>
+<P ID-"graf1">1. This is the first paragraph. By taking advantage of cascading style sheets, you can assign unique IDs to all sorts of document elements: not just paragraphs, but headings, lists -- styles virtually any document element. And once you have a unique ID assigned to a document element, you can display or hide that document element using a coding technique similar to the one shown here.</P>
 
-<P TD-*graf?">2. This is the second paragraph.</P>
+<P ID-"graf?">2. This is the second paragraph.</P>
 
-<P 10-graf3">3. This is the third paragraph. You can dynamically change the content this paragraph contains by entering your own text in the form field below.</P>
+<P ID-"graf3">3. This is the third paragraph. You can dynamically change the content this paragraph contains by entering your own text in the form field below.</P>
 
-<II?>You can choose to display or hide the paragraphs on this page dynamically using the checkboxes below. You can a so choose to change paragraph #3.</117)
+<H2>You can choose to display or hide the paragraphs on this page dynamically using the checkboxes below. You can a so choose to change paragraph #3.</H2>
 
-// The display extt function is called when the user checks or unchecks the checkbox.
+<FORM name="myForm">
 
-<INPUT TYPE-checkbox" SAME"graf box" CHECKED onClick="displayText();"
+// The display text function is called when the user checks or unchecks the checkbox.
 
-Biscay first paragraph
+<INPUT TYPE="checkbox" NAME="graf2box" CHECKED onClick="displayText();">
 
-<br> <TAPUT TYPE-"checkbox" NAME-graf2box CHECKED onClick-"displayText()) Diaz ay second seragraph <br>(or)
+Display first paragraph
+<br>
+<INPUT TYPE="checkbox" NAME="graf2box" CHECKED onClick-"displayText();">
+Display second paragraph
+<br><br>
+Change third paragraph
+<br>
+<INPUT TYPE= "Text" NAME="changeableText" defaultValue="Type here" SIZE="35">
 
-Change third peragraph <b>
+// The changeText() function is called when the user clicks the "Click to change
+// text" button
 
-<INPUT TYPE Lext" NAME "changeableText" defaultValue-Type hore" 51202-36
-
-The changeTextil functian The text button is called when the wier clicks the "Click to change
-
-KENPUT TYPE-Button" VALUE="Click to change text" onclick="changeText()) </FO
-
-</800> FTML
-  
+<INPUT TYPE="Button" VALUE="Click to change text" onclick="changeText();">
+</FORM>
 
 </body>
 </html>
