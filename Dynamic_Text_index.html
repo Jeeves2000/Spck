@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<HEAD>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,7 +8,7 @@
 <TITLE>Adding text dynamically</TITLE>
 
 <SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
-<!-- Hide from browsers that do not support JavaScript
+// <!-- Hide from browsers that don't support JavaScript
 
 function displayText() {
 
@@ -19,57 +19,55 @@ var firstGraf document.getElementById("graf1");
 var secondGraf document.getElementById("graf2");
 
 // If graf1 is selected, change visibility to visible;
-// If graf is NOT selected, change visibility to hidden;
+// If graf1 is NOT selected, change visibility to hidden;
 
-firstGraf.style.visibility=(document.myform.graf1box.checked) ? "visible": "hidden";
-// If graf2 is selected, change visibility to visible:
+firstGraf.style.visibility=(document.myForm.graf1box.checked) ? "visible": "hidden";
+// If graf2 is selected, change visibility to visible; 
 // If graf2 is NOT selected, change visibility to hidden 
 
-secondGraf.style.visibility-(document.myForm.graf2box.checked) ? "visible": "hidden";
+secondGraf.style.visibility=(document.myForm.graf2box.checked) ? "visible": "hidden";
 
-function changeText() (
+}
 
-// Store the new text in a variab'e called newText 
+Function changeText() {
+
+// Store the new text in a variable called newText 
 var newText document.myForm.changeableText.value;
 // Get the existing element text and store it in
 // "oldText"
 
-var oldText document.getElementById("graf3");
+var oldText = document.getElementById("graf3");
 
-// Swap old text with new text.
+// Swap old text with new text
 // Replace oldText with newText 
-odText.firstChild.nodeValue = newText:
+oldText.firstChild.nodeValue = newText;
 
 }
-
 
 //--> Finish hiding
 
 </SCRIPT>
 
-</head>
+</HEAD>
 
 <BODY>
 
 // Defining three named paragraphs
 
-<P ID-"graf1">1. This is the first paragraph. By taking advantage of cascading style sheets, you can assign unique IDs to all sorts of document elements: not just paragraphs, but headings, lists -- styles virtually any document element. And once you have a unique ID assigned to a document element, you can display or hide that document element using a coding technique similar to the one shown here.</P>
+<P Id="graf1"> 1. This is the first paragraph. By taking advantage of cascading style sheets, you can assign unique identifiers to all sorts of document elements: not just paragraphs, but headings, lists -- styles virtually any document element. And once you have a unique ID assigned to a document element, you can display or hide that document element using a coding technique similar to the one shown here.</P>
+<P Id="graf2"> 2. This is the second paragraph.</P>
+<P Id="graf3"> 3. This is the third paragraph. You can dynamically change the content this paragraph contains by entering your own text in the form field below.</P>
 
-<P ID-"graf?">2. This is the second paragraph.</P>
-
-<P ID-"graf3">3. This is the third paragraph. You can dynamically change the content this paragraph contains by entering your own text in the form field below.</P>
-
-<H2>You can choose to display or hide the paragraphs on this page dynamically using the checkboxes below. You can a so choose to change paragraph #3.</H2>
+<H2>You can choose to display or hide the paragraphs on this page dynamically using the checkboxes below. You can also choose to change paragraph #3.</H2>
 
 <FORM name="myForm">
 
 // The display text function is called when the user checks or unchecks the checkbox.
 
-<INPUT TYPE="checkbox" NAME="graf2box" CHECKED onClick="displayText();">
-
+<INPUT TYPE="checkbox" NAME="graf1box" CHECKED onClick="displayText();">
 Display first paragraph
 <br>
-<INPUT TYPE="checkbox" NAME="graf2box" CHECKED onClick-"displayText();">
+<INPUT TYPE="checkbox" NAME="graf2box" CHECKED onClick="displayText();">
 Display second paragraph
 <br><br>
 Change third paragraph
@@ -79,8 +77,8 @@ Change third paragraph
 // The changeText() function is called when the user clicks the "Click to change
 // text" button
 
-<INPUT TYPE="Button" VALUE="Click to change text" onclick="changeText();">
+<INPUT TYPE="button" VALUE="Click to change text" onClick="changeText();">
 </FORM>
 
-</body>
+</BODY>
 </html>
