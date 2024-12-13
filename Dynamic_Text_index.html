@@ -7,22 +7,22 @@
  
 <TITLE>Adding text dynamically</TITLE>
 
-<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
-// <!-- Hide from browsers that don't support JavaScript
+<SCRIPT >
 
 function displayText() {
 
 // Store the heading elements in local variables
-// so we can work with them easily test push
+// so we can work with them easily
 
 
-var firstGraf document.getElementById("graf1");
-var secondGraf document.getElementById("graf2");
+var firstGraf = document.getElementById("graf1");
+var secondGraf = document.getElementById("graf2");
 
 // If graf1 is selected, change visibility to visible;
 // If graf1 is NOT selected, change visibility to hidden;
 
 firstGraf.style.visibility=(document.myForm.graf1box.checked) ? "visible": "hidden";
+
 // If graf2 is selected, change visibility to visible; 
 // If graf2 is NOT selected, change visibility to hidden 
 
@@ -30,10 +30,10 @@ secondGraf.style.visibility=(document.myForm.graf2box.checked) ? "visible": "hid
 
 }
 
-Function changeText() {
+function changeText() {
 
 // Store the new text in a variable called newText 
-var newText document.myForm.changeableText.value;
+var newText = document.myForm.changeableText.value;
 // Get the existing element text and store it in
 // "oldText"
 
@@ -45,7 +45,6 @@ oldText.firstChild.nodeValue = newText;
 
 }
 
-//--> Finish hiding
 
 </SCRIPT>
 
@@ -53,9 +52,9 @@ oldText.firstChild.nodeValue = newText;
 
 <BODY>
 
-// Defining three named paragraphs
+<! --Defining three named paragraphs-->
 
-<P Id="graf1"> 1. This is the first paragraph. By taking advantage of cascading style sheets, you can assign unique identifiers to all sorts of document elements: not just paragraphs, but headings, lists -- styles virtually any document element. And once you have a unique ID assigned to a document element, you can display or hide that document element using a coding technique similar to the one shown here.</P>
+<P Id="graf1"> 1. This is the first paragraph. By taking advantage of cascading style sheets, you can assign unique identifiers to all sorts of document elements: not just paragraphs, but headings, lists -- styles virtually any document, element. And once you have a unique ID assigned to a document element, you can display or hide that document element using a coding technique similar to the one shown here.</P>
 <P Id="graf2"> 2. This is the second paragraph.</P>
 <P Id="graf3"> 3. This is the third paragraph. You can dynamically change the content this paragraph contains by entering your own text in the form field below.</P>
 
@@ -63,7 +62,7 @@ oldText.firstChild.nodeValue = newText;
 
 <FORM name="myForm">
 
-// The display text function is called when the user checks or unchecks the checkbox.
+<! --The display text function is called when the user checks or unchecks the checkbox.-->
 
 <INPUT TYPE="checkbox" NAME="graf1box" CHECKED onClick="displayText();">
 Display first paragraph
@@ -75,8 +74,7 @@ Change third paragraph
 <br>
 <INPUT TYPE= "Text" NAME="changeableText" defaultValue="Type here" SIZE="35">
 
-// The changeText() function is called when the user clicks the "Click to change
-// text" button
+<! --The changeText() function is called when the user clicks the "Click to change text" button -->
 
 <INPUT TYPE="button" VALUE="Click to change text" onClick="changeText();">
 </FORM>
