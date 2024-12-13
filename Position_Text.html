@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>Positioning content dynamically</title>
+  
+<SCRIPT>
+
+function move(direction) {
+var layerText = document.getElementById(“myLayer”);
+
+switch(direction) {
+  
+// If move() is called with an argument of “left,” reposition text 
+// layer so that it is now 50 pixels from the left-hand side of the 
+// window.
+case “left”:
+layerText.style.left = 50;
+break;
+case “right”:
+layerText.style.left = 150;
+break;
+case “up”:
+layerText.style.top = 50;
+break;
+case “down”:
+layerText.style.top = 150;
+break;
+}
+}
+
+</SCRIPT>
+  
+</head>
+
+<BODY>
+
+<! --Creating a CSS layer object named myLayer and positioning it 100 pixels from the top of the window and 100 pixels from the left-hand side of the window. -->
+
+<DIV ID=”myLayer” STYLE=”position:absolute; left:100; top:100;”>
+<P>This is a positionable layer.</P>
+</DIV>
+
+<FORM>
+
+<! --Clicking any of the four buttons calls the move() function with a different argument. -->
+
+<INPUT TYPE="button" NAME=”moveLayer” VALUE=Left onClick=”move("left");”>
+
+<INPUT TYPE="button" NAME=”moveLayer” VALUE=Right onClick=”move("right");”>
+
+<INPUT TYPE="button" NAME=”moveLayer” VALUE=Up onClick=”move("up");”>
+
+<INPUT TYPE="button" NAME=”moveLayer” VALUE=Down onClick=”move("down");”>
+
+</FORM>
+
+</BODY>
+
+</html>
